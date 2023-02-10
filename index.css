@@ -1,0 +1,104 @@
+:root {
+    --color-fondo: #292c36;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--color-fondo);
+    color: #fff;
+}
+.title {
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    margin-top: 0;
+}
+.score-board {
+    width: 20rem;
+    height: 6rem;
+    margin: 20px auto;
+    border: 2px solid;
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.score-board span {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+.badge-left {
+    left: -30px;
+}
+.badge-right {
+    right: -30px;
+}
+.badge-left,
+.badge-right {
+    position: absolute;
+    font-family: monospace;
+    padding: 3px 5px;
+    background-color: rgb(202, 34, 34);
+}
+.resultado {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choice-item {
+    cursor: pointer;
+}
+.choice-item:hover {
+    transition: 0.4s all;
+    transform: scale(1.1);
+}
+.choice-item img {
+    width: 90px;
+    border: 3px solid rgba(255, 255, 255, 0.805);
+    border-radius: 50%;
+    margin: 10px 20px;
+    padding: 10px;
+}
+.comentario {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 500px) {
+    .resultado {
+        font-size: 1.8rem;
+    }
+    .choice-item img {
+        width: 70px;
+    }
+}
+@media (max-width: 400px) {
+    .score-board {
+        width: 15rem;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .resultado {
+        font-size: 1.5rem;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+    }
+    .choice-item img {
+        width: 70px;
+    }
+}
